@@ -1,0 +1,239 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ecomain{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background-color: rgb(255, 255, 255);
+}
+
+.ecomainstate{
+    width: 1272px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.ehcomainstateplus{
+    width: 100%;
+    float: left;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* Header Section with Animated Background and Parallax Effect */
+header {
+    background-color:#48CFCB;
+    background-size: 400% 400%;
+    color: white;
+    padding: 20px 0;
+    animation: backgroundAnimation 10s ease infinite;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50vh;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Floating Text Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header-content {
+    text-align: center;
+    z-index: 2;
+    animation: float 4s ease-in-out infinite;
+}
+
+.header-content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.header-content p {
+    font-size: 20px;
+    color: #f0f0f0;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    font-size: 30px;
+    color: #ffdd57;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+nav ul li a.active {
+    color: #ffdd57;
+    border-bottom: 2px solid #ffdd57;
+}
+
+/* Semester Section */
+.semester {
+    padding: 50px 0;
+    background: white;
+    text-align: center;
+}
+
+.semester h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.semester-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.card a {
+    text-decoration: none;
+    background: #48CFCB;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card a:hover {
+    background: #249c98;
+}
+
+footer {
+    background: #333;
+    color: #48CFCB;
+    position:fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+footer:hover {
+    background: #1a1a1a;
+    transform: translateY(5px);
+    color: white;
+}
+
+footer i{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#slast{
+    margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  /* For tablets */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  /* For desktop devices */
+  @media (min-width: 1025px) {
+    body {
+      font-size: 18px;
+    }
+  }
